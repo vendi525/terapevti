@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Details - Slovenia Doctor Ratings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Slovenia Doctor Ratings</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 id="hospitalName"></h2>
+        
+        <div class="hospital-page-layout">
+            <!-- Left sidebar with doctor list -->
+            <div class="doctor-list-sidebar">
+                <div class="doctor-search">
+                    <input type="text" id="doctorSearch" placeholder="Search doctors...">
+                </div>
+                <ul id="doctorsList">
+                    <!-- This will be populated dynamically from database -->
+                    <!-- Example entries -->
+                    <li><a href="doctor.html?id=1">Dr. Ana Kovač</a></li>
+                    <li><a href="doctor.html?id=2">Dr. Janez Novak</a></li>
+                    <li><a href="doctor.html?id=3">Dr. Maja Horvat</a></li>
+                    <!-- More doctors will be added dynamically -->
+                </ul>
+            </div>
+            
+            <!-- Right content area -->
+            <div class="doctor-categories">
+                <div class="category-box">
+                    <h3>Best Rated Doctors</h3>
+                    <ul id="bestRatedDoctors">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+                
+                <div class="category-box">
+                    <h3>Worst Rated Doctors</h3>
+                    <ul id="worstRatedDoctors">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+                
+                <div class="category-box">
+                    <h3>Most Rated Doctors</h3>
+                    <ul id="mostRatedDoctors">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+                
+                <div class="category-box">
+                    <h3>Latest Comments</h3>
+                    <ul id="latestComments">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Slovenia Doctor Ratings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
