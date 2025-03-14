@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile - Slovenia Doctor Ratings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Slovenia Doctor Ratings</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="doctor-profile">
+            <h2 id="doctorName"></h2>
+            <div class="doctor-hospital" id="doctorHospital"></div>
+            
+            <div class="doctor-rating">
+                <div class="average-rating">
+                    <span id="averageRating">4.5</span>/5 
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="rating-count">
+                    Based on <span id="ratingCount">27</span> ratings
+                </div>
+            </div>
+            
+            <div class="add-rating">
+                <h3>Rate this doctor</h3>
+                <div class="rating-stars">
+                    <i class="far fa-star" data-rating="1"></i>
+                    <i class="far fa-star" data-rating="2"></i>
+                    <i class="far fa-star" data-rating="3"></i>
+                    <i class="far fa-star" data-rating="4"></i>
+                    <i class="far fa-star" data-rating="5"></i>
+                </div>
+                <button id="addCommentBtn" class="btn">Add Comment</button>
+            </div>
+            
+            <!-- Comment Form (Hidden by default) -->
+            <div class="comment-form" id="commentForm" style="display: none;">
+                <h3>Add Your Comment</h3>
+                <div class="form-instructions">
+                    <p>Please be respectful and constructive in your comments. Offensive or inappropriate content will be removed.</p>
+                    <p><strong>Note:</strong> If you don't set a nickname, your comment will be posted as "Anonymous".</p>
+                </div>
+                <form id="commentSubmissionForm">
+                    <div class="form-group">
+                        <label for="nickname">Nickname (optional):</label>
+                        <input type="text" id="nickname" placeholder="Your nickname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (required):</label>
+                        <input type="email" id="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Your Comment:</label>
+                        <textarea id="comment" rows="5" placeholder="Share your experience..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Submit Comment</button>
+                        <button type="button" class="btn btn-cancel" id="cancelComment">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments">
+                    <!-- Comments will be populated dynamically -->
+                    <!-- Example comment -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">Marko</span>
+                            <span class="comment-date">March 10, 2025</span>
+                            <div class="comment-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            Dr. Kovač was very attentive and explained my condition clearly. Would recommend.
+                        </div>
+                        <div class="comment-actions">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> <span>12</span></button>
+                            <button class="dislike-btn"><i class="far fa-thumbs-down"></i> <span>2</span></button>
+                        </div>
+                    </div>
+                    <!-- More comments will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Slovenia Doctor Ratings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
