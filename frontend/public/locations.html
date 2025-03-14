@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovenia Doctor Ratings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Slovenia Doctor Ratings</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Search bar for hospitals -->
+        <div class="search-container">
+            <input type="text" id="hospitalSearch" placeholder="Search hospitals...">
+            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- List of hospitals -->
+        <div class="hospitals-list">
+            <h2>Hospitals in Slovenia</h2>
+            <ul id="hospitalsList">
+                <!-- This will be populated dynamically from database -->
+                <!-- Example entries -->
+                <li><a href="hospital.html?id=1">University Medical Centre Ljubljana</a></li>
+                <li><a href="hospital.html?id=2">University Medical Centre Maribor</a></li>
+                <li><a href="hospital.html?id=3">General Hospital Celje</a></li>
+                <!-- More hospitals will be added dynamically -->
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Slovenia Doctor Ratings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
